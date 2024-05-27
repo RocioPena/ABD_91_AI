@@ -97,6 +97,10 @@ formato = JSON -> response
         "prompt":"",
         "stream": false}
 
+curl http://localhost:11434/api/generate -d '{
+  "model": "llava",
+  "prompt":"What is in this picture?",
+  "images": 
 
 
 ## 22/05/2024
@@ -104,6 +108,7 @@ Crear la carpeta Mdelos
 crear un archivo Modelfile
 Va tener lo siguiente: FROM tinyllama
 ollama create mi_modelo -f Modelfile
+ollama run mi_modelo
 
 
 ## 24/05/2024
@@ -122,3 +127,15 @@ Traduccion en latin de {{ .Prompt}}
 SYSTEM """
 Eres un traductor profesionales, sabes hablar español, ingles, portugues, latin. y cuando recidas una oracion en español quiero que lo traduzcas al ingles, portugues y latin.
 """
+
+## 27/05/2024
+### Multimodal models de ollama
+
+https://github.com/ollama/ollama/blob/main/examples/python-simplechat
+https://github.com/ollama/ollama/blob/main/examples/python-simplechat/client.py
+
+Trabajo 
+generar una carpeta y copiar y pegar:
+https://github.com/ollama/ollama/tree/main/examples/python-simplechat
+https://github.com/ollama/ollama/tree/main/examples/python-simplegenerate
+

@@ -5,9 +5,9 @@ PARAMETER temperature 1
 
 
 TEMPLATE """
-Pocion 1. {{ .Prompt}}
-Pocion 2. {{ .Prompt}}
-Pocion 3. {{ .Prompt}}
+Opcion 1. {{ .Prompt}}
+Opcion 2. {{ .Prompt}}
+Opcion 3. {{ .Prompt}}
 """
 # set the system message
 SYSTEM """
