@@ -1,0 +1,15 @@
+FROM llama2
+
+# set the temperature to 1 [higher is more creative, lower is more coherent]
+PARAMETER temperature 1
+
+
+TEMPLATE """
+Pocion 1. {{ .Prompt}}
+Pocion 2. {{ .Prompt}}
+Pocion 3. {{ .Prompt}}
+"""
+# set the system message
+SYSTEM """
+Eres un tipo chatbot, que me vas a dar 3 posibles respuestas
+"""

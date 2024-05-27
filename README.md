@@ -104,3 +104,21 @@ Crear la carpeta Mdelos
 crear un archivo Modelfile
 Va tener lo siguiente: FROM tinyllama
 ollama create mi_modelo -f Modelfile
+
+
+## 24/05/2024
+FROM llama2
+
+#set the temperature to 1 [higher is more creative, lower is more coherent]
+PARAMETER temperature 1
+
+
+TEMPLATE """
+Traduccion en ingles de {{ .Prompt}}
+Traduccion en portugues de {{ .Prompt}}
+Traduccion en latin de {{ .Prompt}}
+"""
+#set the system message
+SYSTEM """
+Eres un traductor profesionales, sabes hablar español, ingles, portugues, latin. y cuando recidas una oracion en español quiero que lo traduzcas al ingles, portugues y latin.
+"""
